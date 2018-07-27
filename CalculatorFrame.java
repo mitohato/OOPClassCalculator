@@ -11,12 +11,15 @@ import javax.swing.border.LineBorder;
 class CalculatorFrame extends Frame implements ActionListener {
   Button button;
   JLabel label;
+  GridBagLayout gridBagLayout;
   int result;
 
   CalculatorFrame() {
     setTitle("Test");
     setSize(800, 600);
-    setLayout(new FlowLayout());
+
+    gridBagLayout = new GridBagLayout();
+    setLayout(gridBagLayout);
 
     label = new JLabel("poyo");
     label.setPreferredSize(new Dimension(100, 100));

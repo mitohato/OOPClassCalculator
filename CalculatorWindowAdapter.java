@@ -5,7 +5,7 @@ import java.awt.event.WindowEvent;
  * CalculatorWindowAdapter
  */
 class CalculatorWindowAdapter extends WindowAdapter {
-  public void windowClosing(WindowEvent e) {
-    System.exit(0);
-  }
+    public void windowClosing(WindowEvent e) {
+        System.exit(0);
+    }
 }

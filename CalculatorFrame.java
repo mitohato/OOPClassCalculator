@@ -54,4 +54,11 @@ class CalculatorFrame extends Frame implements ActionListener {
         gridBagConstraints.gridwidth = y;
         gridBagLayout.setConstraints(button, gridBagConstraints);
     }
+
+    private void setLabel(JLabel label, int x, int y) {
+        GridBagConstraints gridBagConstraints = new GridBagConstraints();
+        gridBagConstraints.gridheight = x;
+        gridBagConstraints.gridwidth = y;
+        gridBagLayout.setConstraints(label, gridBagConstraints);
+    }
 }

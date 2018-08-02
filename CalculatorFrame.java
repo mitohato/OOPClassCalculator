@@ -13,10 +13,12 @@ class CalculatorFrame extends Frame implements ActionListener {
     JLabel label;
     GridBagLayout gridBagLayout;
     int result;
-    Button[] numButtons;
-    Button[] opButtons;
+    Button[] numButtons = new Button[10];
+    Button[] opButtons = new Button[5];
 
     CalculatorFrame() {
+        initButton();
+
         setTitle("Test");
         setSize(800, 600);
 

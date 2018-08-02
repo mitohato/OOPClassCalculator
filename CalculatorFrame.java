@@ -13,6 +13,7 @@ class CalculatorFrame extends Frame implements ActionListener {
     JLabel label;
     GridBagLayout gridBagLayout;
     int result;
+    Button[] numButtons;
 
     CalculatorFrame() {
         setTitle("Test");
@@ -60,5 +61,11 @@ class CalculatorFrame extends Frame implements ActionListener {
         gridBagConstraints.gridheight = x;
         gridBagConstraints.gridwidth = y;
         gridBagLayout.setConstraints(label, gridBagConstraints);
+    }
+
+    private void initButton() {
+        for (int i = 0; i < 9; i++) {
+            numButtons[i] = new Button();
+        }
     }
 }

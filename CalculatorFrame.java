@@ -9,7 +9,6 @@ import javax.swing.border.LineBorder;
  * CalculatorFrame
  */
 class CalculatorFrame extends Frame implements ActionListener {
-    Panel resultPanel;
     Panel headerButtonPanel;
     Panel hooderButtonPanel;
     Panel centerButtonPanel;
@@ -122,7 +121,6 @@ class CalculatorFrame extends Frame implements ActionListener {
     }
 
     private void initPanel() {
-        resultPanel = new Panel();
         headerButtonPanel = new Panel();
         hooderButtonPanel = new Panel();
         centerButtonPanel = new Panel();

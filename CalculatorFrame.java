@@ -30,8 +30,7 @@ class CalculatorFrame extends Frame implements ActionListener {
                 600
         );
 
-        gridBagLayout = new GridBagLayout();
-        setLayout(gridBagLayout);
+        setLayout(new GridLayout(4, 1));
 
         setCalcLayout();
 
@@ -47,32 +46,7 @@ class CalculatorFrame extends Frame implements ActionListener {
     }
 
     private void setCalcLayout() {
-        setLabel(
-                label,
-                0,
-                0,
-                3,
-                1
-        );
-
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                setButton(
-                        numButtons[i * 3 + j + 1],
-                        j,
-                        3 - i + 1,
-                        1,
-                        1
-                );
-            }
-        }
-        setButton(
-                numButtons[0],
-                0,
-                5,
-                10,
-                1
-        );
+        add(label);
     }
 
     private void setButton(

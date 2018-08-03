@@ -29,7 +29,10 @@ class CalculatorFrame extends Frame implements ActionListener {
                 600
         );
 
-        setLayout(new GridLayout(4, 1));
+        setLayout(new GridLayout(
+                4,
+                1
+        ));
 
         setCalcLayout();
 
@@ -52,6 +55,10 @@ class CalculatorFrame extends Frame implements ActionListener {
     }
 
     private void setupHeader() {
+        headerButtonPanel.setLayout(new GridLayout(
+                1,
+                4
+        ));
 
     }
 

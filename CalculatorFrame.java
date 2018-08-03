@@ -10,7 +10,7 @@ import javax.swing.border.LineBorder;
  */
 class CalculatorFrame extends Frame implements ActionListener {
     Panel headerButtonPanel;
-    Panel hooderButtonPanel;
+    Panel fooderButtonPanel;
     Panel centerButtonPanel;
     JLabel label;
     GridBagLayout gridBagLayout;
@@ -46,6 +46,9 @@ class CalculatorFrame extends Frame implements ActionListener {
 
     private void setCalcLayout() {
         add(label);
+        add(headerButtonPanel);
+        add(centerButtonPanel);
+        add(fooderButtonPanel);
     }
 
     private void setButton(
@@ -122,7 +125,7 @@ class CalculatorFrame extends Frame implements ActionListener {
 
     private void initPanel() {
         headerButtonPanel = new Panel();
-        hooderButtonPanel = new Panel();
+        fooderButtonPanel = new Panel();
         centerButtonPanel = new Panel();
     }
 }

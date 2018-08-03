@@ -51,44 +51,6 @@ class CalculatorFrame extends Frame implements ActionListener {
         add(fooderButtonPanel);
     }
 
-    private void setButton(
-            Button button,
-            int x,
-            int y,
-            int width,
-            int height
-    ) {
-        GridBagConstraints gridBagConstraints = new GridBagConstraints();
-        gridBagConstraints.gridx = x;
-        gridBagConstraints.gridy = y;
-        gridBagConstraints.gridwidth = width;
-        gridBagConstraints.gridheight = height;
-        gridBagLayout.setConstraints(
-                button,
-                gridBagConstraints
-        );
-        add(button);
-    }
-
-    private void setLabel(
-            JLabel label,
-            int x,
-            int y,
-            int width,
-            int height
-    ) {
-        GridBagConstraints gridBagConstraints = new GridBagConstraints();
-        gridBagConstraints.gridx = x;
-        gridBagConstraints.gridy = y;
-        gridBagConstraints.gridwidth = width;
-        gridBagConstraints.gridheight = height;
-        gridBagLayout.setConstraints(
-                label,
-                gridBagConstraints
-        );
-        add(label);
-    }
-
     private void setupHeader() {
 
     }

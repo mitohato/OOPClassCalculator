@@ -26,7 +26,7 @@ class CalculatorFrame extends Frame implements ActionListener {
         setLayout(gridBagLayout);
 
         label = new JLabel("poyo");
-        label.setPreferredSize(new Dimension(100, 100));
+        // label.setPreferredSize(new Dimension(100, 100));
 
         LineBorder lineBorder = new LineBorder(
                 Color.gray,
@@ -35,7 +35,6 @@ class CalculatorFrame extends Frame implements ActionListener {
         );
 
         label.setBorder(lineBorder);
-        add(label);
 
         setCalcLayout();
 
@@ -63,8 +62,8 @@ class CalculatorFrame extends Frame implements ActionListener {
 
     private void setLabel(JLabel label, int x, int y, int width, int height) {
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
-        gridBagConstraints.gridheight = x;
-        gridBagConstraints.gridwidth = y;
+        gridBagConstraints.gridx = x;
+        gridBagConstraints.gridy = y;
         gridBagConstraints.gridwidth = width;
         gridBagConstraints.gridheight = height;
         gridBagLayout.setConstraints(label, gridBagConstraints);

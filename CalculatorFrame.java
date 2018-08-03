@@ -20,13 +20,19 @@ class CalculatorFrame extends Frame implements ActionListener {
         initButton();
 
         setTitle("Test");
-        setSize(800, 600);
+        setSize(
+                800,
+                600
+        );
 
         gridBagLayout = new GridBagLayout();
         setLayout(gridBagLayout);
 
         label = new JLabel("poyo");
-        label.setPreferredSize(new Dimension(220, 50));
+        label.setPreferredSize(new Dimension(
+                220,
+                50
+        ));
 
         LineBorder lineBorder = new LineBorder(
                 Color.gray,
@@ -50,31 +56,62 @@ class CalculatorFrame extends Frame implements ActionListener {
     }
 
     private void setCalcLayout() {
-        setLabel(label, 0, 0, 3, 1);
+        setLabel(
+                label,
+                0,
+                0,
+                3,
+                1
+        );
+
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                setButton(numButtons[i * 3 + j + 1], j, 3 - i + 1, 1, 1);
+                setButton(
+                        numButtons[i * 3 + j + 1],
+                        j,
+                        3 - i + 1,
+                        1,
+                        1
+                );
             }
         }
     }
 
-    private void setButton(Button button, int x, int y, int width, int height) {
+    private void setButton(
+            Button button,
+            int x,
+            int y,
+            int width,
+            int height
+    ) {
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridx = x;
         gridBagConstraints.gridy = y;
         gridBagConstraints.gridwidth = width;
         gridBagConstraints.gridheight = height;
-        gridBagLayout.setConstraints(button, gridBagConstraints);
+        gridBagLayout.setConstraints(
+                button,
+                gridBagConstraints
+        );
         add(button);
     }
 
-    private void setLabel(JLabel label, int x, int y, int width, int height) {
+    private void setLabel(
+            JLabel label,
+            int x,
+            int y,
+            int width,
+            int height
+    ) {
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridx = x;
         gridBagConstraints.gridy = y;
         gridBagConstraints.gridwidth = width;
         gridBagConstraints.gridheight = height;
-        gridBagLayout.setConstraints(label, gridBagConstraints);
+        gridBagLayout.setConstraints(
+                label,
+                gridBagConstraints
+        );
         add(label);
     }
 
@@ -85,12 +122,12 @@ class CalculatorFrame extends Frame implements ActionListener {
 
         for (int i = 0; i < 5; i++) {
             char[] opLabels = {
-                '+',
-                '-',
-                '*',
-                '/',
-                '%',
-                '='
+                    '+',
+                    '-',
+                    '*',
+                    '/',
+                    '%',
+                    '='
             };
             opButtons[i] = new Button(String.valueOf(opLabels[i]));
         }

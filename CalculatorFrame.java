@@ -16,7 +16,7 @@ class CalculatorFrame extends Frame implements ActionListener {
     GridBagLayout gridBagLayout;
     int result;
     Button[] numButtons = new Button[10];
-    Button[] opButtons = new Button[6];
+    OPButtons opButtons = new OPButtons();
 
     CalculatorFrame() {
         initButton();
@@ -75,17 +75,6 @@ class CalculatorFrame extends Frame implements ActionListener {
             numButtons[i] = new Button(String.valueOf(i));
         }
 
-        char[] opLabels = {
-                '+',
-                '-',
-                '*',
-                '/',
-                '%',
-                '='
-        };
-        for (int i = 0; i < 5; i++) {
-            opButtons[i] = new Button(String.valueOf(opLabels[i]));
-        }
     }
 
     private void initLabel() {

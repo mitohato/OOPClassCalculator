@@ -89,15 +89,15 @@ class CalculatorFrame extends Frame implements ActionListener {
         add(label);
     }
 
-    private void setHeader() {
+    private void setupHeader() {
 
     }
 
-    private void setCenter() {
+    private void setupCenter() {
 
     }
 
-    private void setFooder() {
+    private void setupFooder() {
 
     }
 

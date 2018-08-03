@@ -75,6 +75,13 @@ class CalculatorFrame extends Frame implements ActionListener {
                 );
             }
         }
+        setButton(
+                numButtons[0],
+                0,
+                5,
+                10,
+                1
+        );
     }
 
     private void setButton(

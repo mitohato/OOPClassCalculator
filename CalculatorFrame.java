@@ -9,7 +9,6 @@ import javax.swing.border.LineBorder;
  * CalculatorFrame
  */
 class CalculatorFrame extends Frame implements ActionListener {
-    Panel headerButtonPanel;
     Panel fooderButtonPanel;
     Panel mainButtonPanel;
     JLabel label;
@@ -26,6 +25,7 @@ class CalculatorFrame extends Frame implements ActionListener {
         setupHeader();
         setupMain();
         setupFooder();
+
         setTitle("Test");
         setSize(
                 800,

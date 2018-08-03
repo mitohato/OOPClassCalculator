@@ -120,15 +120,15 @@ class CalculatorFrame extends Frame implements ActionListener {
             numButtons[i] = new Button(String.valueOf(i));
         }
 
+        char[] opLabels = {
+                '+',
+                '-',
+                '*',
+                '/',
+                '%',
+                '='
+        };
         for (int i = 0; i < 5; i++) {
-            char[] opLabels = {
-                    '+',
-                    '-',
-                    '*',
-                    '/',
-                    '%',
-                    '='
-            };
             opButtons[i] = new Button(String.valueOf(opLabels[i]));
         }
     }

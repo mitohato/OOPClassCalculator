@@ -12,14 +12,14 @@ public class OPButtons {
   private Button acButton;
 
   OPButtons() {
-    plusButton = new Button();
-    subButton = new Button();
-    timeButton = new Button();
-    devideButton = new Button();
-    equalButton = new Button();
-    modButton = new Button();
-    changeSignButton = new Button();
-    acButton = new Button();
+    plusButton = new Button("+");
+    subButton = new Button("-");
+    timeButton = new Button("*");
+    devideButton = new Button("/");
+    equalButton = new Button("=");
+    modButton = new Button("%");
+    changeSignButton = new Button("±");
+    acButton = new Button("AC");
   }
 
   Button getPlusButton() {

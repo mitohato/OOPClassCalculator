@@ -53,7 +53,7 @@ class CalculatorFrame extends Frame implements ActionListener {
         setLabel(label, 0, 0, 3, 1);
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                setButton(numButtons[i * 3 + j + 1], j, i + 1, 1, 1);
+                setButton(numButtons[i * 3 + j + 1], j, 3 - i + 1, 1, 1);
             }
         }
     }

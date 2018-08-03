@@ -68,7 +68,7 @@ class CalculatorFrame extends Frame implements ActionListener {
     }
 
     private void initButton() {
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 10; i++) {
             numButtons[i] = new Button(String.valueOf(i));
         }
 

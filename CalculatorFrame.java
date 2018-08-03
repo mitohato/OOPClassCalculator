@@ -22,6 +22,7 @@ class CalculatorFrame extends Frame implements ActionListener {
     CalculatorFrame() {
         initButton();
         initLabel();
+        initPanel();
 
         setTitle("Test");
         setSize(
@@ -144,5 +145,12 @@ class CalculatorFrame extends Frame implements ActionListener {
         );
 
         label.setBorder(lineBorder);
+    }
+
+    private void initPanel() {
+        resultPanel = new Panel();
+        headerButtonPanel = new Panel();
+        hooderButtonPanel = new Panel();
+        centerButtonPanel = new Panel();
     }
 }

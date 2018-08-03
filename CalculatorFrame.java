@@ -22,7 +22,6 @@ class CalculatorFrame extends Frame implements ActionListener {
         initLabel();
         initPanel();
 
-        setupHeader();
         setupMain();
         setupFooder();
 
@@ -52,15 +51,10 @@ class CalculatorFrame extends Frame implements ActionListener {
 
     private void setCalcLayout() {
         add(label);
-        add(headerButtonPanel);
         add(mainButtonPanel);
         add(fooderButtonPanel);
     }
 
-    private void setupHeader() {
-        headerButtonPanel.setLayout(new GridLayout(
-                1,
-                4
         ));
 
     }
@@ -97,7 +91,6 @@ class CalculatorFrame extends Frame implements ActionListener {
     }
 
     private void initPanel() {
-        headerButtonPanel = new Panel();
         fooderButtonPanel = new Panel();
         mainButtonPanel = new Panel();
     }

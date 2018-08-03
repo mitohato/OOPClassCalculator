@@ -17,6 +17,7 @@ class CalculatorFrame extends Frame implements ActionListener {
 
     CalculatorFrame() {
         initButton();
+        initLabel();
 
         setTitle("Test");
         setSize(
@@ -26,20 +27,6 @@ class CalculatorFrame extends Frame implements ActionListener {
 
         gridBagLayout = new GridBagLayout();
         setLayout(gridBagLayout);
-
-        label = new JLabel("poyo");
-        label.setPreferredSize(new Dimension(
-                220,
-                50
-        ));
-
-        LineBorder lineBorder = new LineBorder(
-                Color.gray,
-                1,
-                false
-        );
-
-        label.setBorder(lineBorder);
 
         setCalcLayout();
 
@@ -137,5 +124,21 @@ class CalculatorFrame extends Frame implements ActionListener {
         for (int i = 0; i < 5; i++) {
             opButtons[i] = new Button(String.valueOf(opLabels[i]));
         }
+    }
+
+    private void initLabel() {
+        label = new JLabel("poyo");
+        label.setPreferredSize(new Dimension(
+                220,
+                50
+        ));
+
+        LineBorder lineBorder = new LineBorder(
+                Color.gray,
+                1,
+                false
+        );
+
+        label.setBorder(lineBorder);
     }
 }

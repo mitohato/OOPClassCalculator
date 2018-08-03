@@ -89,6 +89,18 @@ class CalculatorFrame extends Frame implements ActionListener {
         add(label);
     }
 
+    private void setHeader() {
+
+    }
+
+    private void setHeader() {
+
+    }
+
+    private void setHeader() {
+
+    }
+
     private void initButton() {
         for (int i = 0; i < 10; i++) {
             numButtons[i] = new Button(String.valueOf(i));

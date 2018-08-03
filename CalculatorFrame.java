@@ -9,6 +9,10 @@ import javax.swing.border.LineBorder;
  * CalculatorFrame
  */
 class CalculatorFrame extends Frame implements ActionListener {
+    Panel resultPanel;
+    Panel headerButtonPanel;
+    Panel hooderButtonPanel;
+    Panel centerButtonPanel;
     JLabel label;
     GridBagLayout gridBagLayout;
     int result;

@@ -55,12 +55,31 @@ class CalculatorFrame extends Frame implements ActionListener {
         add(fooderButtonPanel);
     }
 
+    private void setupMain() {
+        mainButtonPanel.setLayout(new GridLayout(
+            4,
+            4
         ));
 
-    }
+        mainButtonPanel.add(opButtons.getACButton());
+        mainButtonPanel.add(opButtons.getChangeSignButton());
+        mainButtonPanel.add(opButtons.getModButton());
+        mainButtonPanel.add(opButtons.getDevideButton());
 
-    private void setupMain() {
+        mainButtonPanel.add(numButtons[7]);
+        mainButtonPanel.add(numButtons[8]);
+        mainButtonPanel.add(numButtons[9]);
+        mainButtonPanel.add(opButtons.getTimeButton());
 
+        mainButtonPanel.add(numButtons[4]);
+        mainButtonPanel.add(numButtons[5]);
+        mainButtonPanel.add(numButtons[6]);
+        mainButtonPanel.add(opButtons.getSubButton());
+
+        mainButtonPanel.add(numButtons[1]);
+        mainButtonPanel.add(numButtons[2]);
+        mainButtonPanel.add(numButtons[3]);
+        mainButtonPanel.add(opButtons.getPlusButton());
     }
 
     private void setupFooder() {

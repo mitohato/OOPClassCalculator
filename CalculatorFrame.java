@@ -37,9 +37,7 @@ class CalculatorFrame extends Frame implements ActionListener {
         label.setBorder(lineBorder);
         add(label);
 
-        button = new Button("");
-        button.addActionListener(this);
-        add(button);
+        setCalcLayout();
 
         result = 0;
 

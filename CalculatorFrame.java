@@ -61,10 +61,12 @@ class CalculatorFrame extends Frame implements ActionListener {
         add(button);
     }
 
-    private void setLabel(JLabel label, int x, int y) {
+    private void setLabel(JLabel label, int x, int y, int width, int height) {
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridheight = x;
         gridBagConstraints.gridwidth = y;
+        gridBagConstraints.gridwidth = width;
+        gridBagConstraints.gridheight = height;
         gridBagLayout.setConstraints(label, gridBagConstraints);
         add(label);
     }

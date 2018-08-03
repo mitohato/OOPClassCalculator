@@ -51,9 +51,12 @@ class CalculatorFrame extends Frame implements ActionListener {
     }
 
     private void setButton(Button button, int x, int y) {
+    private void setButton(Button button, int x, int y, int width, int height) {
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridx = x;
         gridBagConstraints.gridy = y;
+        gridBagConstraints.gridwidth = width;
+        gridBagConstraints.gridheight = height;
         gridBagLayout.setConstraints(button, gridBagConstraints);
         add(button);
     }

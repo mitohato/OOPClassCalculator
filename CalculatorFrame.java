@@ -26,7 +26,7 @@ class CalculatorFrame extends Frame implements ActionListener {
         setLayout(gridBagLayout);
 
         label = new JLabel("poyo");
-        // label.setPreferredSize(new Dimension(100, 100));
+        label.setPreferredSize(new Dimension(220, 50));
 
         LineBorder lineBorder = new LineBorder(
                 Color.gray,
@@ -50,7 +50,7 @@ class CalculatorFrame extends Frame implements ActionListener {
     }
 
     private void setCalcLayout() {
-        setLabel(label, 0, 0, 1, 3);
+        setLabel(label, 0, 0, 3, 1);
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 setButton(numButtons[i * 3 + j + 1], j, i + 1, 1, 1);

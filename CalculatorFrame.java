@@ -11,7 +11,7 @@ import javax.swing.border.LineBorder;
 class CalculatorFrame extends Frame implements ActionListener {
     Panel headerButtonPanel;
     Panel fooderButtonPanel;
-    Panel centerButtonPanel;
+    Panel mainButtonPanel;
     JLabel label;
     GridBagLayout gridBagLayout;
     int result;
@@ -23,6 +23,9 @@ class CalculatorFrame extends Frame implements ActionListener {
         initLabel();
         initPanel();
 
+        setupHeader();
+        setupMain();
+        setupFooder();
         setTitle("Test");
         setSize(
                 800,
@@ -50,7 +53,7 @@ class CalculatorFrame extends Frame implements ActionListener {
     private void setCalcLayout() {
         add(label);
         add(headerButtonPanel);
-        add(centerButtonPanel);
+        add(mainButtonPanel);
         add(fooderButtonPanel);
     }
 
@@ -62,7 +65,7 @@ class CalculatorFrame extends Frame implements ActionListener {
 
     }
 
-    private void setupCenter() {
+    private void setupMain() {
 
     }
 
@@ -96,6 +99,6 @@ class CalculatorFrame extends Frame implements ActionListener {
     private void initPanel() {
         headerButtonPanel = new Panel();
         fooderButtonPanel = new Panel();
-        centerButtonPanel = new Panel();
+        mainButtonPanel = new Panel();
     }
 }

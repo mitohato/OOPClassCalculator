@@ -40,9 +40,9 @@ class CalculatorFrame extends Frame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent actionEvent) {
-    //     if (actionEvent.getSource() == button) {
-    //         label.setText(Integer.toString(result++));
-    //     }
+        //     if (actionEvent.getSource() == button) {
+        //         label.setText(Integer.toString(result++));
+        //     }
     }
 
     private void setCalcLayout() {

@@ -13,7 +13,7 @@ class CalculatorFrame extends Frame implements ActionListener {
     JLabel label;
     GridBagLayout gridBagLayout;
     int result;
-    Button[] numButtons = new Button[10];
+    Button[] numButtons = new Button[11];
     OPButtons opButtons = new OPButtons();
 
     CalculatorFrame() {
@@ -55,7 +55,7 @@ class CalculatorFrame extends Frame implements ActionListener {
     private void setupMain() {
         mainButtonPanel.setLayout(new GridLayout(
             5,
-            5
+            4
         ));
 
         mainButtonPanel.add(opButtons.getACButton());
@@ -79,6 +79,8 @@ class CalculatorFrame extends Frame implements ActionListener {
         mainButtonPanel.add(opButtons.getPlusButton());
 
         mainButtonPanel.add(numButtons[0]);
+        mainButtonPanel.add(numButtons[10]);
+        mainButtonPanel.add(opButtons.getDotButton());
         mainButtonPanel.add(opButtons.getEqualButton());
     }
 
@@ -86,6 +88,7 @@ class CalculatorFrame extends Frame implements ActionListener {
         for (int i = 0; i < 10; i++) {
             numButtons[i] = new Button(String.valueOf(i));
         }
+        numButtons[10] = new Button("00");
 
     }
 

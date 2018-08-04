@@ -9,20 +9,95 @@ import javax.swing.border.LineBorder;
  * CalculatorFrame
  */
 class CalculatorFrame extends Frame implements ActionListener {
-    Button button;
+    Panel mainButtonPanel;
     JLabel label;
     GridBagLayout gridBagLayout;
     int result;
+    Button[] numButtons = new Button[11];
+    OPButtons opButtons = new OPButtons();
 
     CalculatorFrame() {
+        initButton();
+        initLabel();
+        initPanel();
+
+        setupMain();
+
         setTitle("Test");
-        setSize(800, 600);
+        setSize(
+                800,
+                600
+        );
 
-        gridBagLayout = new GridBagLayout();
-        setLayout(gridBagLayout);
+        setLayout(new GridLayout(
+                2,
+                1
+        ));
 
+        setCalcLayout();
+
+        result = 0;
+
+        // addWindowListener(new CalculatorWindowAdapter());
+    }
+
+    public void actionPerformed(ActionEvent actionEvent) {
+        //     if (actionEvent.getSource() == button) {
+        //         label.setText(Integer.toString(result++));
+        //     }
+    }
+
+    private void setCalcLayout() {
+        add(label);
+        add(mainButtonPanel);
+    }
+
+    private void setupMain() {
+        mainButtonPanel.setLayout(new GridLayout(
+                5,
+                4
+        ));
+
+        mainButtonPanel.add(opButtons.getACButton());
+        mainButtonPanel.add(opButtons.getChangeSignButton());
+        mainButtonPanel.add(opButtons.getModButton());
+        mainButtonPanel.add(opButtons.getDevideButton());
+
+        mainButtonPanel.add(numButtons[7]);
+        mainButtonPanel.add(numButtons[8]);
+        mainButtonPanel.add(numButtons[9]);
+        mainButtonPanel.add(opButtons.getTimeButton());
+
+        mainButtonPanel.add(numButtons[4]);
+        mainButtonPanel.add(numButtons[5]);
+        mainButtonPanel.add(numButtons[6]);
+        mainButtonPanel.add(opButtons.getSubButton());
+
+        mainButtonPanel.add(numButtons[1]);
+        mainButtonPanel.add(numButtons[2]);
+        mainButtonPanel.add(numButtons[3]);
+        mainButtonPanel.add(opButtons.getPlusButton());
+
+        mainButtonPanel.add(numButtons[0]);
+        mainButtonPanel.add(numButtons[10]);
+        mainButtonPanel.add(opButtons.getDotButton());
+        mainButtonPanel.add(opButtons.getEqualButton());
+    }
+
+    private void initButton() {
+        for (int i = 0; i < 10; i++) {
+            numButtons[i] = new Button(String.valueOf(i));
+        }
+        numButtons[10] = new Button("00");
+
+    }
+
+    private void initLabel() {
         label = new JLabel("poyo");
-        label.setPreferredSize(new Dimension(100, 100));
+        label.setPreferredSize(new Dimension(
+                220,
+                50
+        ));
 
         LineBorder lineBorder = new LineBorder(
                 Color.gray,
@@ -31,34 +106,9 @@ class CalculatorFrame extends Frame implements ActionListener {
         );
 
         label.setBorder(lineBorder);
-        add(label);
-
-        button = new Button("");
-        button.addActionListener(this);
-        add(button);
-
-        result = 0;
-
-        addWindowListener(new CalculatorWindowAdapter());
     }
 
-    public void actionPerformed(ActionEvent actionEvent) {
-        if (actionEvent.getSource() == button) {
-            label.setText(Integer.toString(result++));
-        }
-    }
-
-    private void setButton(Button button, int x, int y) {
-        GridBagConstraints gridBagConstraints = new GridBagConstraints();
-        gridBagConstraints.gridheight = x;
-        gridBagConstraints.gridwidth = y;
-        gridBagLayout.setConstraints(button, gridBagConstraints);
-    }
-
-    private void setLabel(JLabel label, int x, int y) {
-        GridBagConstraints gridBagConstraints = new GridBagConstraints();
-        gridBagConstraints.gridheight = x;
-        gridBagConstraints.gridwidth = y;
-        gridBagLayout.setConstraints(label, gridBagConstraints);
+    private void initPanel() {
+        mainButtonPanel = new Panel();
     }
 }

@@ -12,6 +12,7 @@ public class OPButtons {
   private Button modButton;
   private Button changeSignButton;
   private Button acButton;
+  private Button dotButton;
 
   OPButtons() {
     plusButton = new Button("+");
@@ -22,6 +23,7 @@ public class OPButtons {
     modButton = new Button("%");
     changeSignButton = new Button("±");
     acButton = new Button("AC");
+    dotButton = new Button(".");
   }
 
   Button getPlusButton() {
@@ -47,5 +49,8 @@ public class OPButtons {
   }
   Button getACButton() {
     return acButton;
+  }
+  Button getDotButton() {
+    return dotButton;
   }
 }

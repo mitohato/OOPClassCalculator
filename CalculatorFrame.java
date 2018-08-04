@@ -54,8 +54,8 @@ class CalculatorFrame extends Frame implements ActionListener {
 
     private void setupMain() {
         mainButtonPanel.setLayout(new GridLayout(
-            5,
-            4
+                5,
+                4
         ));
 
         mainButtonPanel.add(opButtons.getACButton());

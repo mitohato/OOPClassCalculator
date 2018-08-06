@@ -43,7 +43,7 @@ class CalculatorFrame extends Frame implements ActionListener {
 
     public void actionPerformed(ActionEvent actionEvent) {
         Button clickButton = (Button) actionEvent.getSource();
-        when(clickButton.getLabel()) {
+        switch(clickButton.getLabel()) {
             case "0":
 
                 break;

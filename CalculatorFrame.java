@@ -42,9 +42,45 @@ class CalculatorFrame extends Frame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent actionEvent) {
-            // if (actionEvent.getSource() == button) {
-                // label.setText(Integer.toString(result++));
-            // }
+        Button clickButton = (Button) actionEvent.getSource();
+        when(clickButton.getLabel()) {
+            case "0":
+
+                break;
+            case "00":
+
+                break;
+            case "1":
+
+                break;
+            case "2":
+
+                break;
+            case "3":
+
+                break;
+            case "4":
+
+                break;
+            case "5":
+
+                break;
+            case "6":
+
+                break;
+            case "7":
+
+                break;
+            case "8":
+
+                break;
+            case "9":
+
+                break;
+
+            default:
+
+        }
     }
 
     private void setCalcLayout() {

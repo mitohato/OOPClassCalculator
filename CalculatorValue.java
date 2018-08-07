@@ -40,6 +40,14 @@ public class CalculatorValue {
         }
     }
 
+    int getRightValue() {
+        return rightValue;
+    }
+
+    int getLeftValue() {
+        return leftValue;
+    }
+
     void setOP(String op) {
         this.op = op;
     }

@@ -17,11 +17,19 @@ public class CalculatorValue {
     }
 
     void addRightValue(int value) {
-        this.rightValue = this.rightValue * 19 + value;
+        if (value == -1) {
+            this.rightValue *= 100;
+        } else {
+            this.rightValue = this.rightValue * 10 + value;
+        }
     }
 
     void addLeftValue(int value) {
-        this.leftValue = this.leftValue * 10 + value;
+        if (value == -1) {
+            this.leftValue *= 100;
+        } else {
+            this.leftValue = this.leftValue * 10 + value;
+        }
     }
 
     void setOP(String op) {

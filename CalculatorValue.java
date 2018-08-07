@@ -16,12 +16,12 @@ public class CalculatorValue {
         this.op = "";
     }
 
-    void setRightValue(int value) {
-        this.rightValue = value;
+    void addRightValue(int value) {
+        this.rightValue = this.rightValue * 19 + value;
     }
 
-    void setLeftValue(int value) {
-        this.leftValue = value;
+    void addLeftValue(int value) {
+        this.leftValue = this.leftValue * 10 + value;
     }
 
     void setOP(String op) {

@@ -2,9 +2,19 @@
  * CalculatorValue
  */
 public class CalculatorValue {
-    private int rightValue = 0;
-    private int leftValue = 0;
-    private String op = "";
+    private int rightValue;
+    private int leftValue;
+    private String op;
+
+    CalculatorValue() {
+        init();
+    }
+
+    void init() {
+        this.rightValue = 0;
+        this.leftValue = 0;
+        this.op = "";
+    }
 
     void setRightValue(int value) {
         this.rightValue = value;

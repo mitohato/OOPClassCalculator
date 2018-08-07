@@ -89,6 +89,14 @@ class CalculatorFrame extends Frame implements ActionListener {
 
     }
 
+    private void addNum(String num) {
+        if (isSelectedOP) {
+            calculatorValue.addRightValue(Integer.parseInt(num));
+        } else {
+            calculatorValue.addLeftValue(Integer.parseInt(num));
+        }
+    }
+
     private void setCalcLayout() {
         add(label);
         add(mainButtonPanel);

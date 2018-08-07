@@ -15,6 +15,7 @@ class CalculatorFrame extends Frame implements ActionListener {
     int result;
     Button[] numButtons = new Button[11];
     OPButtons opButtons = new OPButtons();
+    Boolean isSelectedOP = false;
 
     CalculatorFrame() {
         initButton();

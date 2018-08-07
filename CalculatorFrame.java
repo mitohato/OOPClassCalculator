@@ -80,30 +80,8 @@ class CalculatorFrame extends Frame implements ActionListener {
                 return;
         }
 
-        switch (clickButton.getLabel()) {
-            case "+":
+        calculatorValue.setOP(clickButton.getLabel());
 
-                return;
-            case "-":
-
-                return;
-            case "*":
-
-                return;
-            case "/":
-
-                return;
-            case "%":
-
-                return;
-
-            case "AC":
-
-                return;
-            case "=":
-
-                return;
-        }
     }
 
     private void setCalcLayout() {

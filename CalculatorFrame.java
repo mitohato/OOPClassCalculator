@@ -51,37 +51,36 @@ class CalculatorFrame extends Frame implements ActionListener {
 
         switch (clickButton.getLabel()) {
             case "0":
-
+                addNum("0");
                 return;
             case "00":
-
                 return;
             case "1":
-
+                addNum("1");
                 return;
             case "2":
-
+                addNum("2");
                 return;
             case "3":
-
+                addNum("3");
                 return;
             case "4":
-
+                addNum("4");
                 return;
             case "5":
-
+                addNum("5");
                 return;
             case "6":
-
+                addNum("6");
                 return;
             case "7":
-
+                addNum("7");
                 return;
             case "8":
-
+                addNum("8");
                 return;
             case "9":
-
+                addNum("1");
                 return;
         }
 

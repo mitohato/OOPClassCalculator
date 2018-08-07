@@ -155,6 +155,8 @@ class CalculatorFrame extends Frame implements ActionListener {
                 220,
                 50
         ));
+        label.setHorizontalAlignment(JLabel.TRAILING);
+        label.setFont(new Font("Arial", Font.PLAIN, 48));
 
         LineBorder lineBorder = new LineBorder(
                 Color.gray,

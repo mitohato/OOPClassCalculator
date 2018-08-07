@@ -44,6 +44,11 @@ class CalculatorFrame extends Frame implements ActionListener {
 
     public void actionPerformed(ActionEvent actionEvent) {
         Button clickButton = (Button) actionEvent.getSource();
+
+        if (clickButton.getLabel() == "AC") {
+            calculatorValue.init();
+        }
+
         switch (clickButton.getLabel()) {
             case "0":
 

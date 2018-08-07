@@ -16,6 +16,14 @@ public class CalculatorValue {
         this.op = "";
     }
 
+    void changeValueSign(Boolean isRight) {
+        if (isRight) {
+            this.rightValue *= -1;
+        } else {
+            this.leftValue *= -1;
+        }
+    }
+
     void addRightValue(int value) {
         if (value == -1) {
             this.rightValue *= 100;

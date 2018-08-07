@@ -57,7 +57,7 @@ public class CalculatorValue {
             case "%":
                 return (leftValue % rightValue);
             default:
-                return "0";
+                return 0;
         }
     }
 }

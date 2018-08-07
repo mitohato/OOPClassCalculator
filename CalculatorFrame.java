@@ -37,7 +37,6 @@ class CalculatorFrame extends Frame implements ActionListener {
 
         setCalcLayout();
 
-        result = 0;
 
         addWindowListener(new CalculatorWindowAdapter());
     }
@@ -151,7 +150,7 @@ class CalculatorFrame extends Frame implements ActionListener {
     }
 
     private void initLabel() {
-        label = new JLabel("poyo");
+        label = new JLabel("0");
         label.setPreferredSize(new Dimension(
                 220,
                 50

@@ -12,10 +12,10 @@ class CalculatorFrame extends Frame implements ActionListener {
     Panel mainButtonPanel;
     JLabel label;
     GridBagLayout gridBagLayout;
-    int result;
     Button[] numButtons = new Button[11];
     OPButtons opButtons = new OPButtons();
     Boolean isSelectedOP = false;
+    CalculatorValue calculatorValue = new CalculatorValue();
 
     CalculatorFrame() {
         initButton();

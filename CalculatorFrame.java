@@ -43,43 +43,65 @@ class CalculatorFrame extends Frame implements ActionListener {
 
     public void actionPerformed(ActionEvent actionEvent) {
         Button clickButton = (Button) actionEvent.getSource();
-        switch(clickButton.getLabel()) {
+        switch (clickButton.getLabel()) {
             case "0":
 
-                break;
+                return;
             case "00":
 
-                break;
+                return;
             case "1":
 
-                break;
+                return;
             case "2":
 
-                break;
+                return;
             case "3":
 
-                break;
+                return;
             case "4":
 
-                break;
+                return;
             case "5":
 
-                break;
+                return;
             case "6":
 
-                break;
+                return;
             case "7":
 
-                break;
+                return;
             case "8":
 
-                break;
+                return;
             case "9":
 
-                break;
+                return;
+        }
 
-            default:
+        switch (clickButton.getLabel()) {
+            case "+":
 
+                return;
+            case "-":
+
+                return;
+            case "*":
+
+                return;
+            case "/":
+
+                return;
+            case "%":
+
+                return;
+
+            case "AC":
+
+                return;
+            case "=":
+
+                return;
         }
     }
 

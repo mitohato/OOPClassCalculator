@@ -54,6 +54,7 @@ class CalculatorFrame extends Frame implements ActionListener {
                 addNum("0");
                 return;
             case "00":
+                addNum("-1");
                 return;
             case "1":
                 addNum("1");

@@ -2,8 +2,8 @@
  * CalculatorValue
  */
 public class CalculatorValue {
-    private Long rightValue;
-    private Long leftValue;
+    private long rightValue;
+    private long leftValue;
     private String op;
 
     CalculatorValue() {

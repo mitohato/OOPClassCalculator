@@ -40,11 +40,11 @@ public class CalculatorValue {
         }
     }
 
-    int getRightValue() {
+    long getRightValue() {
         return rightValue;
     }
 
-    int getLeftValue() {
+    long getLeftValue() {
         return leftValue;
     }
 
@@ -52,7 +52,7 @@ public class CalculatorValue {
         this.op = op;
     }
 
-    int getResult() {
+    long getResult() {
         switch (op) {
             case "+":
                 return (leftValue + rightValue);

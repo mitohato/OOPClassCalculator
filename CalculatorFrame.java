@@ -104,7 +104,7 @@ class CalculatorFrame extends Frame implements ActionListener {
 
             case "=":
                 isSelectedEqual = true;
-                break
+                break;
 
             default:
                 isSelectedOP = true;

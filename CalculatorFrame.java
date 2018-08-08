@@ -37,7 +37,6 @@ class CalculatorFrame extends Frame implements ActionListener {
 
         setCalcLayout();
 
-
         addWindowListener(new CalculatorWindowAdapter());
     }
 
@@ -100,6 +99,10 @@ class CalculatorFrame extends Frame implements ActionListener {
             return;
         }
 
+        if (clickButton.getLabel() == "±") {
+            calculatorValue.changeValueSign(isSelectedOP);
+            updateLabel();
+        }
         calculatorValue.setOP(clickButton.getLabel());
 
     }
@@ -166,6 +169,14 @@ class CalculatorFrame extends Frame implements ActionListener {
         numButtons[10].addActionListener(this);
 
         opButtons = new OPButtons(this);
+    }
+
+    private void updateLabel() {
+        if (isSelectedOP) {
+            label.setText(String.valueOf(calculatorValue.getRightValue()));
+        } else {
+            label.setText(String.valueOf(calculatorValue.getLeftValue()));
+        }
     }
 
     private void initLabel() {

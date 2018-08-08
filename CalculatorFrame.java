@@ -49,6 +49,7 @@ class CalculatorFrame extends Frame implements ActionListener {
             calculatorValue.init();
         }
 
+        System.out.println(clickButton.getLabel());
         switch (clickButton.getLabel()) {
             case "0":
                 addNum("0");
@@ -99,7 +100,7 @@ class CalculatorFrame extends Frame implements ActionListener {
                 calculatorValue.changeValueSign(isSelectedOP);
                 break;
             case "AC":
-                calculatorValue.init();
+                init();
                 break;
 
             case "=":
@@ -209,5 +210,11 @@ class CalculatorFrame extends Frame implements ActionListener {
 
     private void initPanel() {
         mainButtonPanel = new Panel();
+    }
+
+    private void init() {
+        isSelectedOP = false;
+        isSelectedEqual = false;
+        calculatorValue.init();
     }
 }

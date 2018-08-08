@@ -109,7 +109,10 @@ class CalculatorFrame extends Frame implements ActionListener {
                 break;
 
             default:
-                if (isSelectedEqual || isSelectedOP) {
+                if (
+                        isSelectedEqual ||
+                        isSelectedOP
+                ) {
                     calculatorValue.init();
                     calculatorValue.addLeftValue(Integer.parseInt(res));
                     isSelectedEqual = false;
@@ -204,7 +207,11 @@ class CalculatorFrame extends Frame implements ActionListener {
                 50
         ));
         label.setHorizontalAlignment(JLabel.TRAILING);
-        label.setFont(new Font("Arial", Font.PLAIN, 48));
+        label.setFont(new Font(
+                "Arial",
+                Font.PLAIN,
+                48
+        ));
 
         LineBorder lineBorder = new LineBorder(
                 Color.gray,

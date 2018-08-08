@@ -63,20 +63,25 @@ public class CalculatorValue {
         this.op = op;
     }
 
-    long getResult() {
-        switch (op) {
-            case "+":
-                return (leftValue + rightValue);
-            case "-":
-                return (leftValue - rightValue);
-            case "*":
-                return (leftValue * rightValue);
-            case "/":
-                return (leftValue / rightValue);
-            case "%":
-                return (leftValue % rightValue);
-            default:
-                return 0;
+    String getResult() {
+        try {
+            switch (op) {
+                case "+":
+                    return String.valueOf(leftValue + rightValue);
+                case "-":
+                    return String.valueOf(leftValue - rightValue);
+                case "*":
+                    return String.valueOf(leftValue * rightValue);
+                case "/":
+                    return String.valueOf(leftValue / rightValue);
+                case "%":
+                    return String.valueOf(leftValue % rightValue);
+                default:
+                    return String.valueOf(leftValue);
+            }
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
+            return "Undefined";
         }
     }
 }

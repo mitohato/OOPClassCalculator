@@ -80,7 +80,7 @@ class CalculatorFrame extends Frame implements ActionListener {
                 addNum("8");
                 return;
             case "9":
-                addNum("1");
+                addNum("9");
                 return;
         }
 

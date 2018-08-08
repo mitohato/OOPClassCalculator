@@ -43,6 +43,7 @@ class CalculatorFrame extends Frame implements ActionListener {
 
     public void actionPerformed(ActionEvent actionEvent) {
         Button clickButton = (Button) actionEvent.getSource();
+        Boolean isClickNum = false;
 
         if (clickButton.getLabel() == "AC") {
             calculatorValue.init();
@@ -51,37 +52,52 @@ class CalculatorFrame extends Frame implements ActionListener {
         switch (clickButton.getLabel()) {
             case "0":
                 addNum("0");
-                return;
+                isClickNum = true;
+                break;
             case "00":
                 addNum("-1");
-                return;
+                isClickNum = true;
+                break;
             case "1":
                 addNum("1");
-                return;
+                isClickNum = true;
+                break;
             case "2":
                 addNum("2");
-                return;
+                isClickNum = true;
+                break;
             case "3":
                 addNum("3");
-                return;
+                isClickNum = true;
+                break;
             case "4":
                 addNum("4");
-                return;
+                isClickNum = true;
+                break;
             case "5":
                 addNum("5");
-                return;
+                isClickNum = true;
+                break;
             case "6":
                 addNum("6");
-                return;
+                isClickNum = true;
+                break;
             case "7":
                 addNum("7");
-                return;
+                isClickNum = true;
+                break;
             case "8":
                 addNum("8");
-                return;
+                isClickNum = true;
+                break;
             case "9":
                 addNum("9");
-                return;
+                isClickNum = true;
+                break;
+        }
+        if (isClickNum) {
+            updateLabel();
+            return;
         }
 
         calculatorValue.setOP(clickButton.getLabel());

@@ -53,47 +53,47 @@ class CalculatorFrame extends Frame implements ActionListener {
         System.out.println(clickButton.getLabel());
         switch (clickButton.getLabel()) {
             case "0":
-                addNum("0");
+                addNum(0);
                 isClickNum = true;
                 break;
             case "00":
-                addNum("-1");
+                addNum(-1);
                 isClickNum = true;
                 break;
             case "1":
-                addNum("1");
+                addNum(1);
                 isClickNum = true;
                 break;
             case "2":
-                addNum("2");
+                addNum(2);
                 isClickNum = true;
                 break;
             case "3":
-                addNum("3");
+                addNum(3);
                 isClickNum = true;
                 break;
             case "4":
-                addNum("4");
+                addNum(4);
                 isClickNum = true;
                 break;
             case "5":
-                addNum("5");
+                addNum(5);
                 isClickNum = true;
                 break;
             case "6":
-                addNum("6");
+                addNum(6);
                 isClickNum = true;
                 break;
             case "7":
-                addNum("7");
+                addNum(7);
                 isClickNum = true;
                 break;
             case "8":
-                addNum("8");
+                addNum(8);
                 isClickNum = true;
                 break;
             case "9":
-                addNum("9");
+                addNum(9);
                 isClickNum = true;
                 break;
 
@@ -133,11 +133,11 @@ class CalculatorFrame extends Frame implements ActionListener {
         }
     }
 
-    private void addNum(String num) {
+    private void addNum(int num) {
         if (isSelectedOP) {
-            calculatorValue.addRightValue(Integer.parseInt(num));
+            calculatorValue.addRightValue(num);
         } else {
-            calculatorValue.addLeftValue(Integer.parseInt(num));
+            calculatorValue.addLeftValue(num);
         }
     }
 

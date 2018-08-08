@@ -5,6 +5,7 @@ public class CalculatorValue {
     private long rightValue;
     private long leftValue;
     private String op;
+    private Boolean isPlus;
 
     CalculatorValue() {
         init();
@@ -14,6 +15,7 @@ public class CalculatorValue {
         this.rightValue = 0;
         this.leftValue = 0;
         this.op = "";
+        isPlus = true;
     }
 
     void changeValueSign(Boolean isRight) {
@@ -22,13 +24,18 @@ public class CalculatorValue {
         } else {
             this.leftValue *= -1;
         }
+        isPlus = !isPlus;
     }
 
     void addRightValue(int value) {
         if (value == -1) {
             this.rightValue *= 100;
         } else {
-            this.rightValue = this.rightValue * 10 + value;
+            if (isPlus) {
+                this.rightValue = this.rightValue * 10 + value;
+            } else {
+                this.rightValue = this.rightValue * 10 - value;
+            }
         }
     }
 
@@ -36,7 +43,11 @@ public class CalculatorValue {
         if (value == -1) {
             this.leftValue *= 100;
         } else {
-            this.leftValue = this.leftValue * 10 + value;
+            if (isPlus) {
+                this.leftValue = this.leftValue * 10 + value;
+            } else {
+                this.leftValue = this.leftValue * 10 - value;
+            }
         }
     }
 

@@ -26,7 +26,7 @@ class CalculatorFrame extends Frame implements ActionListener {
 
         setupMain();
 
-        setTitle("Test");
+        setTitle("Calculator");
         setSize(
                 800,
                 600

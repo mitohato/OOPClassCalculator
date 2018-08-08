@@ -17,6 +17,7 @@ class CalculatorFrame extends Frame implements ActionListener {
     Boolean isSelectedOP = false;
     Boolean isSelectedEqual = false;
     CalculatorValue calculatorValue = new CalculatorValue();
+    String res = "";
 
     CalculatorFrame() {
         initButton();
@@ -108,6 +109,11 @@ class CalculatorFrame extends Frame implements ActionListener {
                 break;
 
             default:
+                if (isSelectedEqual || isSelectedOP) {
+                    calculatorValue.init();
+                    calculatorValue.addLeftValue(Integer.parseInt(res));
+                    isSelectedEqual = false;
+                }
                 isSelectedOP = true;
                 calculatorValue.setOP(clickButton.getLabel());
                 break;
@@ -188,6 +194,7 @@ class CalculatorFrame extends Frame implements ActionListener {
         } else {
             label.setText(String.valueOf(calculatorValue.getLeftValue()));
         }
+        res = calculatorValue.getResult();
     }
 
     private void initLabel() {

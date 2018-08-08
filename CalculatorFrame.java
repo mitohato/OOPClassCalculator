@@ -13,7 +13,7 @@ class CalculatorFrame extends Frame implements ActionListener {
     JLabel label;
     GridBagLayout gridBagLayout;
     Button[] numButtons = new Button[11];
-    OPButtons opButtons = new OPButtons();
+    OPButtons opButtons;
     Boolean isSelectedOP = false;
     CalculatorValue calculatorValue = new CalculatorValue();
 
@@ -144,9 +144,12 @@ class CalculatorFrame extends Frame implements ActionListener {
     private void initButton() {
         for (int i = 0; i < 10; i++) {
             numButtons[i] = new Button(String.valueOf(i));
+            numButtons[i].addActionListener(this);
         }
         numButtons[10] = new Button("00");
+        numButtons[10].addActionListener(this);
 
+        opButtons = new OPButtons(this);
     }
 
     private void initLabel() {

@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 /**
  * OPButtons
@@ -14,16 +15,25 @@ public class OPButtons {
     private Button acButton;
     private Button dotButton;
 
-    OPButtons() {
+    OPButtons(ActionListener actionListener) {
         plusButton = new Button("+");
+        plusButton.addActionListener(actionListener);
         subButton = new Button("-");
+        subButton.addActionListener(actionListener);
         timeButton = new Button("*");
+        timeButton.addActionListener(actionListener);
         devideButton = new Button("/");
+        devideButton.addActionListener(actionListener);
         equalButton = new Button("=");
+        equalButton.addActionListener(actionListener);
         modButton = new Button("%");
+        modButton.addActionListener(actionListener);
         changeSignButton = new Button("±");
+        changeSignButton.addActionListener(actionListener);
         acButton = new Button("AC");
+        acButton.addActionListener(actionListener);
         dotButton = new Button(".");
+        dotButton.addActionListener(actionListener);
     }
 
     Button getPlusButton() {

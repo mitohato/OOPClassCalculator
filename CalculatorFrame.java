@@ -93,26 +93,20 @@ class CalculatorFrame extends Frame implements ActionListener {
                 addNum("9");
                 isClickNum = true;
                 break;
-        }
-        if (isClickNum) {
-            updateLabel();
-            return;
-        }
 
-        if (clickButton.getLabel() == "±") {
-            calculatorValue.changeValueSign(isSelectedOP);
-            updateLabel();
-            return;
-        }
+            case "±":
+                calculatorValue.changeValueSign(isSelectedOP);
+                break;
+            case "AC":
+                calculatorValue.init();
+                break;
 
-        if (clickButton.getLabel() == "AC") {
-            calculatorValue.init();
-            updateLabel();
-            return;
+            default:
+                calculatorValue.setOP(clickButton.getLabel());
+
         }
 
-        calculatorValue.setOP(clickButton.getLabel());
-
+        updateLabel();
     }
 
     private void changeSign() {
